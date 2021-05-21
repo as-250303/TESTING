@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Netfix/css/main.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.2/plyr.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Quattrocento+Sans" rel="stylesheet" />
+    <script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
+    <title>Netflix</title>
+
+</head>
+<style>
+    html {
+        font-family: Poppins;
+        background: #000;
+        margin: 0;
+        padding: 0
+    }
+
+    .loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+    }
+
+    .loading-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+
+    .loading-text span {
+        display: inline-block;
+        margin: 0 5px;
+        color: #d82121;
+        font-size: 1.6em;
+        font-family: 'Quattrocento Sans', sans-serif;
+    }
+
+    .loading-text span:nth-child(1) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0s infinite linear alternate;
+    }
+
+    .loading-text span:nth-child(2) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.2s infinite linear alternate;
+    }
+
+    .loading-text span:nth-child(3) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.4s infinite linear alternate;
+    }
+
+    .loading-text span:nth-child(4) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.6s infinite linear alternate;
+    }
+
+    .loading-text span:nth-child(5) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.8s infinite linear alternate;
+    }
+
+    .loading-text span:nth-child(6) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1s infinite linear alternate;
+    }
+
+    .loading-text span:nth-child(7) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.2s infinite linear alternate;
+    }
+
+    @keyframes blur-text {
+        0% {
+            filter: blur(0px);
+        }
+
+        100% {
+            filter: blur(4px);
+        }
+    }
+
+    .plyr video {
+
+        height: 99vh;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .btn {
+        padding: 10px;
+        position: absolute;
+        top: 50vh;
+        left: 50vw;
+        background: rgb(25, 129, 248);
+        color: white;
+        z-index: +4454;
+        border-radius: 20px;
+
+    }
+
+    .btn a {
+        text-decoration: none;
+        color: white;
+    }
+</style>
+
+<body>
+    <!-- <div id="loading" class="loading">
+
+        <div class="loading-text">
+            <span class="loading-text-words">N</span>
+            <span class="loading-text-words">E</span>
+            <span class="loading-text-words">T</span>
+            <span class="loading-text-words">F</span>
+            <span class="loading-text-words">L</span>
+            <span class="loading-text-words">I</span>
+            <span class="loading-text-words">X</span>
+
+        </div>
+    </div> -->
+    <div class="btn"><a class="mxplayer"
+            href="intent:https://ankit-anime.driveas.workers.dev/1:/Valiant%202005%20BluRay%201080p%20DD5.1%20H265-d3g.mkv#Intent;package=com.mxtech.videoplayer.pro;S.title=Valiant 2005 BluRay 1080p DD5.1 H265-d3g.mkv;end">PLAY
+            IN MX PLAYER</a></div>
+    <!-- <video id="player" src="" autoplay controls width="100%" height="530px">
+
+        <track src="sub2.vtt" kind="subtitles" srclang="en" label="English">
+    </video> -->
+
+    <!-- <script src="./min.js"></script>
+    <script>
+        setTimeout(videovisible, 500)
+        function videovisible() {
+            document.getElementById('loading').style.display = 'none'
+        }
+        const player = new Plyr('#player');
+        window.onload = function () {
+            var url = document.location.href,
+                params = url.split('?')[1].split('&'),
+                data = {}, tmp;
+            for (var i = 0, l = params.length; i < l; i++) {
+                tmp = params[i].split('=');
+                data[tmp[0]] = tmp[1];
+            }
+
+            console.log(data.name);
+            if (data.name == "godvskong") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/Godzilla.vs.Kong.2021.1080p.WEBRip.x264-RARBG.mp4";
+                }, 1000)
+
+
+            }
+            if (data.name == "joker") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/@nkit/Copy%20of%20joker%20(2019)%20720p%20WEBRip%20x264%20Dual%20Audio%20[Hindi-English]%20ESub%20[HDWebMovies].mkv";
+                }, 1000)
+
+
+            }
+            if (data.name == "JL2") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/Tg%20},1000)StreamersHub%20Snyder%20Cut%20720p.mkv";
+                }, 1000)
+            }
+
+            if (data.name == "incep") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/Telegram},1000)AlPacinoDumpInception_2010_720p_Bluray_Hindi_English_AAC.mkv";
+                }, 1000)
+            }
+            if (data.name == "inter") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/},1000)nkit/Copy%20of%20Interstellar.2014.720p.BluRay.x264.YIFY.mp4";
+                }, 1000)
+            }
+            if (data.name == "shutter") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/Telegram},1000)AlpacinodumpShutter_Island_2010_720p_Hindi_English.mkv";
+                }, 1000)
+            }
+            if (data.name == "pass") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/},1000)nkit/Hollywood%20Dual%20Audio%20Movies/5th%20Passenger%20(2018)%20720p%20WEBRip%20x264%20Eng%20Subs%20[Dual%20Audio]%20[Hindi%20DD%202.0%20-%20English%202.0]%20-%20Dr.STAR.mkv";
+                }, 1000)
+            }
+            if (data.name == "iron1") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/},1000)nkit/Marvel.Cinematic.Universe.MCU.Collection.2008-2018.1080p.IMAX.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing_copy/1.Iron.Man.2008.1080p.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing.mkv";
+                }, 1000)
+            }
+            if (data.name == "hulk") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/},1000)nkit/Marvel.Cinematic.Universe.MCU.Collection.2008-2018.1080p.IMAX.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing_copy/2.The.Incredible.Hulk.2008.1080p.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing.mkv";
+                }, 1000)
+            }
+            if (data.name == "iron2") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/},1000)nkit/Marvel.Cinematic.Universe.MCU.Collection.2008-2018.1080p.IMAX.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing_copy/3.Iron.Man.2.2010.1080p.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing.mkv";
+                }, 1000)
+            }
+            if (data.name == "Thor1") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/},1000)nkit/Marvel.Cinematic.Universe.MCU.Collection.2008-2018.1080p.IMAX.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing_copy/4.Thor.2011.1080p.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing.mkv";
+                }, 1000)
+            }
+            if (data.name == "cap1") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/},1000)nkit/Marvel.Cinematic.Universe.MCU.Collection.2008-2018.1080p.IMAX.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing_copy/5.Captain.America.The.First.Avenger.2011.1080p.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing.mkv";
+                }, 1000)
+            }
+            if (data.name == "avng1") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/},1000)nkit/Marvel.Cinematic.Universe.MCU.Collection.2008-2018.1080p.IMAX.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing_copy/6.The.Avengers.2012.1080p.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing.mkv";
+                }, 1000)
+            }
+            if (data.name == "iron3") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/},1000)nkit/Marvel.Cinematic.Universe.MCU.Collection.2008-2018.1080p.IMAX.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing_copy/7.Iron.Man.3.2013.1080p.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing.mkv";
+                }, 1000)
+            }
+            if (data.name == "inf") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/},1000)nkit/Marvel.Cinematic.Universe.MCU.Collection.2008-2018.1080p.IMAX.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing_copy/19.Avengers.Infinity.War.2018.1080p.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing.mkv";
+                }, 1000)
+            }
+            if (data.name == "endgame") {
+                setTimeout(() => {
+                    document.querySelector("video").src = "https://techarmy-new.driveas.workers.dev/0:/},1000)nkit/Marvel.Cinematic.Universe.MCU.Collection.2008-2018.1080p.IMAX.BluRay.Dual.Audio.Hindi.640kbps.Eng-KartiKing_copy/Avengers%20Endgame%202019%20BluRay%20720p%20Hindi%20English%20AAC%205.1%20x264%20ESub%20-%20mkvCinemas%20[Telly].mkv";
+                }, 1000)
+            }
+            else {
+
+                const llink = window.atob(data.name);
+                setTimeout(() => {
+                    document.querySelector("video").src = llink;
+                }, 1000)
+            }
+
+
+        }
+    </script> -->
+</body>
+
+</html>
